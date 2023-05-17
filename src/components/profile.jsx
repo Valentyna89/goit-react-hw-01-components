@@ -1,5 +1,4 @@
-function Profile(props) {
-  const { username, tag, location, avatar, followers, views, likes } = props;
+export default function Profile({ username, tag, location, avatar, followers, views, likes }) {
   return (
     <div class="profile">
       <div class="description">
@@ -26,4 +25,4 @@ function Profile(props) {
   );
 }
 
-export { Profile };
+
