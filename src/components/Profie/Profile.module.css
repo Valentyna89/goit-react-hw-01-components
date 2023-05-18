@@ -1,9 +1,5 @@
 .profile {
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    margin: 50px auto;
     height: auto;
     width: 300px;
     background-color: #f1f1f1;
@@ -13,7 +9,6 @@
 }
 
 .description {
-    position: relative;
     text-align: center;
     padding-bottom: 5px;
 }
