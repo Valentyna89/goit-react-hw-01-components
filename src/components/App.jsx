@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 
 export const App = () => {
   const { username, tag, location, avatar, stats } = user;
-  const { label, percentage } = data;
+  const { label, percentage } = data[0];
   return (
     <Fragment>
       <Profile

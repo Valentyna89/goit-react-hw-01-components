@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
 export default function Statistics({ label, percentage }) {
+  //  console.log({ percentage });
   return (
     <section className={css.statistics}>
       <h2 className={css.title}>Upload stats</h2>
@@ -30,6 +31,6 @@ export default function Statistics({ label, percentage }) {
 }
 
 Statistics.propTypes = {
-  label: PropTypes.symbol.isRequired,
+  label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
 };
