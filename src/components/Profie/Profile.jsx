@@ -21,15 +21,15 @@ export default function Profile({
       <div className={css.stats_block}>
         <ul className={css.stats}>
           <li className={css.stats_li}>
-            <span className={css.label}>Followers</span>
+            <span className={css.labelName}>Followers</span>
             <span className={css.quantity}>{followers}</span>
           </li>
           <li className={css.stats_li}>
-            <span className={css.label}>Views</span>
+            <span className={css.labelName}>Views</span>
             <span className={css.quantity}>{views}</span>
           </li>
           <li className={css.stats_li}>
-            <span className={css.label}>Likes</span>
+            <span className={css.labelName}>Likes</span>
             <span className={css.quantity}>{likes}</span>
           </li>
         </ul>

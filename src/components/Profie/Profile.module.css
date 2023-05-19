@@ -38,6 +38,13 @@
     color: gray;
 }
 
+.stats_block {
+    padding: 10px 30px;
+    background-color: rgb(225, 226, 230);
+    border-top: 1px solid rgb(197, 195, 195);
+
+}
+
 .stats {
     list-style: none;
     display: flex;
@@ -51,14 +58,8 @@
 
 }
 
-.stats_block {
-    padding: 10px 30px;
-    background-color: rgb(225, 226, 230);
-    border-top: 1px solid rgb(197, 195, 195);
 
-}
-
-.label {
+.labelName {
     font-size: 20px;
     color: gray;
 }

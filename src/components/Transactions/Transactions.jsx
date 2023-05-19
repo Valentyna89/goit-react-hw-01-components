@@ -13,6 +13,6 @@ export default function Transactions({ type, amount, currency }) {
 
 Transactions.propTypes = {
   type: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
 };

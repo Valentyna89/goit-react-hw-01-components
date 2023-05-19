@@ -1,5 +1,7 @@
 import Profile from './Profie/Profile';
 import user from '../components/user.json';
+import Statistics from './Statistics/Statistics';
+import data from '../components/data.json';
 import FriendListItem from './FriendList/FriendListItem';
 import friends from '../components/friends.json';
 import TransactionsList from './Transactions/TransactionsList';
@@ -8,7 +10,7 @@ import { Fragment } from 'react';
 
 export const App = () => {
   const { username, tag, location, avatar, stats } = user;
-  // const { type, amount, currency } = transactions;
+  const { label, percentage } = data;
   return (
     <Fragment>
       <Profile
@@ -20,6 +22,8 @@ export const App = () => {
         views={stats.views}
         likes={stats.likes}
       />
+
+      <Statistics label={label} percentage={percentage} />
 
       <FriendListItem friends={friends} />
 
