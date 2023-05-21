@@ -1,4 +1,4 @@
-import Transactions from './Transactions';
+import { Transactions } from './Transactions';
 import css from './Transactions.module.css';
 
 export default function TransactionsList({ items }) {

@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 
 export const App = () => {
   const { username, tag, location, avatar, stats } = user;
-  const { label, percentage } = data[0];
+
   return (
     <Fragment>
       <Profile
@@ -23,7 +23,7 @@ export const App = () => {
         likes={stats.likes}
       />
 
-      <Statistics label={label} percentage={percentage} />
+      <Statistics title="Upload stats" stats={data} />
 
       <FriendListItem friends={friends} />
 

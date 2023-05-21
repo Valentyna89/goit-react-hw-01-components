@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Transactions.module.css';
 
-export default function Transactions({ type, amount, currency }) {
+export  function Transactions({ type, amount, currency }) {
   return (
     <tr className={css.transHistoryItems}>
       <td className={css.transHistoryItem}>{type}</td>
