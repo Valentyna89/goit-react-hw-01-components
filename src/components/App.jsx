@@ -1,7 +1,7 @@
 import Profile from './Profie/Profile';
 import Statistics from './Statistics/Statistics';
 import FriendListItem from './FriendList/FriendListItem';
-import TransactionsList from './Transactions/TransactionsList';
+import Transactions from './Transactions/Transactions';
 import user from '../data/user.json';
 import data from '../data/data.json';
 import friends from '../data/friends.json';
@@ -27,7 +27,7 @@ export const App = () => {
 
       <FriendListItem friends={friends} />
 
-      <TransactionsList items={transactions} />
+      <Transactions items={transactions} />
     </Fragment>
   );
 };
