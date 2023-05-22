@@ -1,7 +1,19 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
+import {
+  ProfileCard,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  StatsBlock,
+  Stats,
+  StatsLi,
+  LabelName,
+  Quantity,
+} from './Profile.styled';
 
-export default function Profile({
+export default function Profile ({
   username,
   tag,
   location,
@@ -11,39 +23,37 @@ export default function Profile({
   likes,
 }) {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt={username} className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
-      <div className={css.stats_block}>
-        <ul className={css.stats}>
-          <li className={css.stats_li}>
-            <span className={css.labelName}>Followers</span>
-            <span className={css.quantity}>{followers}</span>
-          </li>
-          <li className={css.stats_li}>
-            <span className={css.labelName}>Views</span>
-            <span className={css.quantity}>{views}</span>
-          </li>
-          <li className={css.stats_li}>
-            <span className={css.labelName}>Likes</span>
-            <span className={css.quantity}>{likes}</span>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <ProfileCard>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
+      <StatsBlock>
+        <Stats>
+          <StatsLi>
+            <LabelName>Followers</LabelName>
+            <Quantity>{followers}</Quantity>
+          </StatsLi>
+          <StatsLi>
+            <LabelName>Views</LabelName>
+            <Quantity>{views}</Quantity>
+          </StatsLi>
+          <StatsLi>
+            <LabelName>Likes</LabelName>
+            <Quantity>{likes}</Quantity>
+          </StatsLi>
+        </Stats>
+      </StatsBlock>
+    </ProfileCard>
   );
-}
+};
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number),
 };

@@ -1,11 +1,11 @@
 import Profile from './Profie/Profile';
-import user from '../components/user.json';
 import Statistics from './Statistics/Statistics';
-import data from '../components/data.json';
 import FriendListItem from './FriendList/FriendListItem';
-import friends from '../components/friends.json';
 import TransactionsList from './Transactions/TransactionsList';
-import transactions from '../components/transactions.json';
+import user from '../data/user.json';
+import data from '../data/data.json';
+import friends from '../data/friends.json';
+import transactions from '../data/transactions.json';
 import { Fragment } from 'react';
 
 export const App = () => {
